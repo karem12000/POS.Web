@@ -1,0 +1,45 @@
+﻿
+<script>
+
+    let form = $('#frm');
+
+    function Submit(){
+        event.preventDefault();
+        Save()
+    }
+
+     function Save() {
+        if ($('#Name').val() == '') {
+            Swal.fire({
+                title: `من فضلك أدخل الاسم`,
+                timer: 2000,
+                timerProgressBar: true,
+                icon: 'error',
+                showConfirmButton: false
+            })
+        } else {
+
+            $.post('@Url.GetAction("Save")', form.serialize() , function (res) {
+                if (res.status) {
+                    Swal.fire({
+                        title: `${res.message}`,
+                        timer: 2000,
+                        timerProgressBar: true,
+                        icon: 'success',
+                        showConfirmButton: false
+                    })
+                }
+                else {
+                    Swal.fire({
+                        title: `${res.message}`,
+                        timer: 4000,
+                        timerProgressBar: true,
+                        icon: 'error',
+                        showConfirmButton: false
+                    })
+                }
+            });
+        }
+
+    }
+</script>

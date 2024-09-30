@@ -1,0 +1,156 @@
+﻿[dir="rtl"] #sidebar.active .sidebar-wrapper {
+    left: unset;
+    right: 0;
+}
+
+[dir="rtl"] #sidebar:not(.active) .sidebar-wrapper {
+    left: unset;
+    right: -300px;
+}
+
+[dir="rtl"] .sidebar-wrapper .menu .sidebar-link {
+    /* flex-direction: row-reverse; */
+    gap: 10px;
+}
+
+[dir="rtl"] #main {
+    margin-left: unset;
+    margin-right: 300px;
+    padding: 2rem
+}
+
+@media screen and (max-width:1199px) {
+    [dir="rtl"] #main {
+        margin-left: unset;
+        margin-right: 0
+    }
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item:before {
+    float: right
+}
+
+[dir="rtl"] div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: unset;
+    margin-right: 0.5em
+}
+
+[dir="rtl"] .page-item:first-child .page-link {
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    border-bottom-right-radius: var(--bs-pagination-border-radius);
+    border-top-right-radius: var(--bs-pagination-border-radius);
+}
+
+[dir="rtl"] .page-item:last-child .page-link {
+    border-bottom-right-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: var(--bs-pagination-border-radius);
+    border-top-left-radius: var(--bs-pagination-border-radius);
+}
+
+[dir="rtl"] table.dataTable thead th {
+    text-align: right;
+}
+
+.sidebar-wrapper .sidebar-header .logo a {
+    display: inline-block;
+    width: 225px;
+    height: 80px;
+}
+
+.sidebar-wrapper .sidebar-header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+[dir="rtl"] #main.layout-navbar {
+    transition: margin-right .5s ease-out;
+}
+
+[dir="rtl"] #sidebar:not(.active) ~ #main {
+    margin-right: 0;
+}
+
+#auth #auth-left .auth-logo {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #auth #auth-left .auth-logo a {
+        display: inline-block;
+        width: 250px;
+        height: 135px;
+    }
+
+    #auth #auth-left .auth-logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+[dir= "rtl"] .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+    margin-left: -4px;
+    margin-right: 8px;
+    border-right: 1px solid #293c7e;
+    border-left: unset;
+}
+
+.choices__list--multiple .choices__item {
+    background-color: #435ebe;
+    border-color: #435ebe
+}
+
+.choices__inner {
+    background-color: #fff;
+    border-radius: 10px
+}
+
+.form-auth {
+    position: absolute;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+}
+
+#auth #auth-left {
+    padding: 2rem 5rem
+}
+
+#auth #auth-left .auth-title {
+    font-size: 3rem;
+    text-align: center
+}
+
+#auth #auth-left .auth-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center
+}
+
+@media screen and (max-width: 576px) {
+    #auth #auth-left {
+        padding: 1rem 2rem;
+    }
+}
+.sidebar-wrapper .menu .submenu .submenu-item a {
+    padding: 0.7rem 1rem;
+}
+
+[dir="rtl"] .sidebar-wrapper .menu .sidebar-item.has-sub .sidebar-link:after {
+    right: unset;
+    left: 15px;
+}
+thead td.sorting{
+    text-align:right !important;
+}
+.ProductName,
+.TotalQtyPrice,
+.InvoiceTotalPrice {
+    font-weight: bold;
+    font-size: 20px;
+}

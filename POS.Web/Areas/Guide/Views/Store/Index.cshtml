@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">إضافة مخزن</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <form class="form form-horizontal" id="frm" onsubmit="Submit()">
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="Name">اسم المخزن<span style="color:red;"> * </span></label>
+                                        <input hidden name="id" id="id" value="" class="d-none" />
+                                        <input type="text"  id="Name" name="Name" class="form-control" placeholder="اسم المخزن">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="Name">عنوان المخزن</label>
+                                        <input type="text" id="Address" name="Address" class="form-control" placeholder="عنوان المخزن">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="Name">تليفون المخزن</label>
+                                        <input type="text" id="Phone" name="PhoneNum" class="form-control" placeholder="تليفون المخزن">
+                                    </div>
+                                </div>
+            
+                                <div class="col-sm-12 d-flex justify-content-between mt-5">
+                                    <button type="submit" class="btn btn-primary me-1 mb-1" onclick="Submit()">
+                                        حفظ
+                                    </button>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+
+    <partial name="_Scripts" />
+}
